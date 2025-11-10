@@ -183,5 +183,69 @@ Impact of Limited Computational Resources on Model Choice:
 	•	Complex models like large neural networks or large gradient-boosted ensembles may be too slow or expensive to deploy.
 	•	Therefore, the hospital may prioritize efficiency and reliability over small gains in accuracy.
 
+Part 4: Reflection & Workflow Diagram (10 points)
+
+⸻
+
+1. Reflection (5 points)
+Most challenging part:
+The most challenging stage was data preprocessing and bias management. Healthcare data often contains missing values, inconsistent coding, and historical treatment biases. Ensuring the dataset was clean, representative, and fair required careful decision-making, which directly impacts model performance and patient safety.
+
+How to improve with more time/resources:
+With more time and resources, I would:
+	•	Collect additional real-world features (e.g., social support, follow-up accessibility).
+	•	Use domain experts (clinicians) to validate feature importance and interpretation.
+	•	Implement a continuous monitoring system to track performance drift and fairness over time.
+
+2.workflow diagram
+
+         ┌────────────────────────┐
+         │   Problem Definition   │
+         │ (Goal, Stakeholders)   │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │   Data Collection       │
+         │ (EHR, Records, Logs)    │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │ Data Preprocessing     │
+         │ Clean, Encode, Scale   │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │  Feature Engineering   │
+         │ Create Clinical Signals │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │   Model Development     │
+         │ Train + Tune Model      │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │   Evaluation            │
+         │ Precision, Recall, F1   │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │     Deployment         │
+         │ Integration to System   │
+         └──────────┬─────────────┘
+                    │
+                    ▼
+         ┌────────────────────────┐
+         │ Continuous Monitoring   │
+         │ Performance + Drift     │
+         └────────────────────────┘
+
+
 
 
