@@ -149,4 +149,39 @@ print(cm)
 print("\nPrecision:", round(precision, 3))
 print("Recall:", round(recall, 3))
 
+Part 3: Critical Thinking (20 points)
+
+⸻
+
+1. Ethics & Bias (10 points)
+How biased training data may affect outcomes:
+If the historical hospital data contains bias (e.g., certain groups received different levels of care due to socioeconomic status, language barriers, age, or race), the model may learn and reinforce those inequalities.
+For example, if patients from low-income backgrounds historically had higher readmission rates due to reduced access to follow-up care, the model may label all similar patients as “high-risk”, even when their clinical condition is stable.
+This can lead to:
+	•	Unequal resource allocation (some groups receive more interventions, others less).
+	•	Unfair patient treatment and worsened trust in healthcare systems.
+	•	Amplification of existing health disparities over time.
+
+One strategy to mitigate this bias:
+	•	Perform fairness auditing and reweighting.
+Analyze model performance across demographic groups and adjust training weights or thresholds so that the model performs equally well across subgroups.
+For example, ensure recall and precision are balanced across age, gender, and socioeconomic groups.
+
+⸻
+
+2. Trade-offs (10 points)
+Interpretability vs Accuracy in Healthcare:
+	•	In healthcare, interpretability is critical because clinicians need to understand why a prediction is made before acting on it.
+	•	Highly complex models (e.g., deep neural networks) may provide higher accuracy, but they are often difficult to explain.
+	•	Simpler models (e.g., logistic regression, decision trees) are easier to interpret but may have slightly lower performance.
+	•	Therefore, the trade-off is between better predictive performance versus clinically acceptable transparency.
+Most hospitals prefer interpretable models because treatment decisions must be justifiable and defensible.
+Impact of Limited Computational Resources on Model Choice:
+	•	If the hospital has limited computing capacity, they may need to choose:
+	•	Simpler models (e.g., logistic regression, random forest with small depth)
+	•	Models that run quickly in real-time on standard hospital hardware
+	•	Complex models like large neural networks or large gradient-boosted ensembles may be too slow or expensive to deploy.
+	•	Therefore, the hospital may prioritize efficiency and reliability over small gains in accuracy.
+
+
 
